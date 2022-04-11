@@ -38,20 +38,27 @@ team2.array.forEach(member => {
 
 // Constructor function
 
-function Member(id, name, grade){
-  this.id = id;
-  this.name = name;
-  this.grade = grade;
-  this.toString = function() {
+class Member{
+  
+  constructor(id, name, grade){
+    this.id = id;
+    this.name = name;
+    this.grade = grade;
+  }
+  toString() {
     console.log(this.id +' : '+ this.name +' , '+ this.grade);
   }
 }
 
-function Team() {
-  this.array = [];
-  this.add = function (member) {
+class Team {
+  constructor() {
+    this.array = [];
+  }
+ 
+  add (member) {
      this.array.push(member);
   }
+  
 }
 
 const constructMemeber1 = new Member(4, 'mahdi', 'grade2')
