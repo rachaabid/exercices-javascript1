@@ -12,12 +12,14 @@
 
 <body>
   <div class="container">
-    <form class="mt-3">
-      <div class="col-3 mb-3">
-        <label for="salaire" class="form-label">Salaire:</label>
-        <input type="text" id="inputsalaire" class="form-control" placeholder="Tapez votre salaire" required>
 
+    <form class="mt-3">
+
+      <div class="col-3 mb-3">
+        <label for="salaire" class="form-label">Salaire brut:</label>
+        <input type="text" id="inputsalaire" class="form-control" placeholder="Tapez votre salaire" onkeyup="up()" required>
       </div>
+
       <input type="checkbox" id="bonus" name="bonus" value="bonus">
       <label for="bonus">bonus</label>
       <input type="checkbox" id="allocation" name="allocation" value="allocation">
@@ -29,14 +31,18 @@
       <label for="homme">Homme</label><br>
 
       Nombre des personnes à charge: <br>
-      <select name="Nombre des personnes à charge">
+      <select id="personne" name="Nombre des personnes à charge">
         <option value="1">1 personne à charge</option>
         <option value="2">2 personnes à charge</option>
         <option value="3">3 personnes à charge</option>
         <option value="4">4 personnes à charge</option>
       </select><br>
 
-      <button type="submit" class="btn btn-success mt-3">Calculer</button>
+      <button class="btn btn-success mt-3" type="button" onclick="myFunction()"> Calculer</button>
+      <div id="resultat"></div>
+      <input id="resultat2" type="text" readonly>
+      </form>
+
   </div>
 
   <script src="ex8.js"></script>
